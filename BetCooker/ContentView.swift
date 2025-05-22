@@ -13,8 +13,10 @@ struct ContentView: View {
             .onAppear {
                 APIService.shared.fetchTennisOdds { _ in }
             }
-
-    }
+            .onAppear {
+                APIService.shared.fetchTennisScores { _ in }
+            }
+        }
 }
 
 #Preview {
