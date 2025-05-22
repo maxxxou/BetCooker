@@ -12,7 +12,7 @@ struct MatchDetailView: View {
                     .foregroundColor(.white)
 
                 Text("\(match.commenceTime.prefix(16).replacingOccurrences(of: "T", with: " "))")
-                    .foregroundColor(Color(hex: "#B0B0B0"))
+                    .foregroundColor(Color(hex: "#121212"))
 
                 ForEach(match.bookmakers, id: \.key) { bookmaker in
                     VStack(alignment: .leading, spacing: 8) {
@@ -23,7 +23,7 @@ struct MatchDetailView: View {
                         ForEach(bookmaker.markets, id: \.key) { market in
                             VStack(alignment: .leading) {
                                 Text("Marché : \(market.key)")
-                                    .foregroundColor(Color(hex: "#B0B0B0"))
+                                    .foregroundColor(Color(hex: "#b0b0b0"))
                                     .font(.subheadline)
 
                                 ForEach(market.outcomes, id: \.name) { outcome in

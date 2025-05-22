@@ -2,33 +2,28 @@ import SwiftUI
 
 struct MatchesView: View {
     @StateObject var viewModel = OddsViewModel()
-    @State private var selectedBookmaker: String = "All"
+    @State private var searchText: String = ""
 
     var filteredMatches: [MatchOdds] {
-        if selectedBookmaker == "All" {
+        if searchText.isEmpty {
             return viewModel.matches
         } else {
-            return viewModel.matches.filter { match in
-                match.bookmakers.contains { $0.title == selectedBookmaker }
+            return viewModel.matches.filter {
+                $0.homeTeam.localizedCaseInsensitiveContains(searchText) ||
+                $0.awayTeam.localizedCaseInsensitiveContains(searchText)
             }
         }
-    }
-
-    var uniqueBookmakers: [String] {
-        let all = viewModel.matches.flatMap { $0.bookmakers.map { $0.title } }
-        return ["All"] + Array(Set(all)).sorted()
     }
 
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-                Picker("Bookmaker", selection: $selectedBookmaker) {
-                    ForEach(uniqueBookmakers, id: \ .self) { bookmaker in
-                        Text(bookmaker).tag(bookmaker)
-                    }
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding()
+                TextField("Rechercher une équipe", text: $searchText)
+                    .padding(10)
+                    .background(Color(hex: "#1F1F2E"))
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+                    .padding(.horizontal)
 
                 ZStack {
                     Color(hex: "#121212").edgesIgnoringSafeArea(.all)
@@ -78,11 +73,11 @@ struct MatchesView: View {
                         }
                     }
                 }
-                .navigationTitle("Matchs")
-                .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
-                .toolbarBackground(.visible, for: .navigationBar)
-                .onAppear { viewModel.fetchOdds() }
             }
+            .navigationTitle("Matchs")
+            .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .onAppear { viewModel.fetchOdds() }
         }
     }
 }

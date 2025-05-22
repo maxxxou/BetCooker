@@ -95,7 +95,7 @@ class APIService {
         return key
     }
 
-    func fetchTennisOdds(completion: @escaping (Result<[MatchOdds], Error>) -> Void) {
+    func fetchOdds(completion: @escaping (Result<[MatchOdds], Error>) -> Void) {
         let urlString = """
         https://api.the-odds-api.com/v4/sports/soccer/odds?regions=eu&markets=h2h,spreads,totals&oddsFormat=decimal&apiKey=\(apiKey)
         """
