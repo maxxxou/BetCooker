@@ -7,41 +7,40 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
-		ACF5623B2DDF23B80037D2A6 /* PBXContainerItemProxy */ = {
+		ACF5626E2DDF27170037D2A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = ACF562242DDF23B50037D2A6 /* Project object */;
+			containerPortal = ACF562582DDF27150037D2A6 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = ACF5622B2DDF23B50037D2A6;
+			remoteGlobalIDString = ACF5625F2DDF27150037D2A6;
 			remoteInfo = BetCooker;
 		};
-		ACF562452DDF23B80037D2A6 /* PBXContainerItemProxy */ = {
+		ACF562782DDF27170037D2A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = ACF562242DDF23B50037D2A6 /* Project object */;
+			containerPortal = ACF562582DDF27150037D2A6 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = ACF5622B2DDF23B50037D2A6;
+			remoteGlobalIDString = ACF5625F2DDF27150037D2A6;
 			remoteInfo = BetCooker;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		ACF5622C2DDF23B50037D2A6 /* BetCooker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetCooker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACF5623A2DDF23B80037D2A6 /* BetCookerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetCookerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACF562442DDF23B80037D2A6 /* BetCookerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetCookerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACF562932DDF27170037D2A6 /* BetCooker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BetCooker.xcodeproj; sourceTree = "<group>"; };
+		ACF562602DDF27150037D2A6 /* BetCooker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetCooker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACF5626D2DDF27170037D2A6 /* BetCookerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetCookerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACF562772DDF27170037D2A6 /* BetCookerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetCookerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		ACF5622E2DDF23B50037D2A6 /* BetCooker */ = {
+		ACF562622DDF27150037D2A6 /* BetCooker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = BetCooker;
 			sourceTree = "<group>";
 		};
-		ACF5623D2DDF23B80037D2A6 /* BetCookerTests */ = {
+		ACF562702DDF27170037D2A6 /* BetCookerTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = BetCookerTests;
 			sourceTree = "<group>";
 		};
-		ACF562472DDF23B80037D2A6 /* BetCookerUITests */ = {
+		ACF5627A2DDF27170037D2A6 /* BetCookerUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = BetCookerUITests;
 			sourceTree = "<group>";
@@ -49,21 +48,21 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		ACF562292DDF23B50037D2A6 /* Frameworks */ = {
+		ACF5625D2DDF27150037D2A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ACF562372DDF23B80037D2A6 /* Frameworks */ = {
+		ACF5626A2DDF27170037D2A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ACF562412DDF23B80037D2A6 /* Frameworks */ = {
+		ACF562742DDF27170037D2A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -73,29 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ACF562232DDF23B50037D2A6 = {
+		ACF562572DDF27150037D2A6 = {
 			isa = PBXGroup;
 			children = (
-				ACF5622E2DDF23B50037D2A6 /* BetCooker */,
-				ACF5623D2DDF23B80037D2A6 /* BetCookerTests */,
-				ACF562472DDF23B80037D2A6 /* BetCookerUITests */,
-				ACF5622D2DDF23B50037D2A6 /* Products */,
+				ACF562622DDF27150037D2A6 /* BetCooker */,
+				ACF562702DDF27170037D2A6 /* BetCookerTests */,
+				ACF5627A2DDF27170037D2A6 /* BetCookerUITests */,
+				ACF562612DDF27150037D2A6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		ACF5622D2DDF23B50037D2A6 /* Products */ = {
+		ACF562612DDF27150037D2A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ACF5622C2DDF23B50037D2A6 /* BetCooker.app */,
-				ACF5623A2DDF23B80037D2A6 /* BetCookerTests.xctest */,
-				ACF562442DDF23B80037D2A6 /* BetCookerUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		ACF562942DDF27170037D2A6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
+				ACF562602DDF27150037D2A6 /* BetCooker.app */,
+				ACF5626D2DDF27170037D2A6 /* BetCookerTests.xctest */,
+				ACF562772DDF27170037D2A6 /* BetCookerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,140 +95,134 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ACF5622B2DDF23B50037D2A6 /* BetCooker */ = {
+		ACF5625F2DDF27150037D2A6 /* BetCooker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ACF5624E2DDF23B80037D2A6 /* Build configuration list for PBXNativeTarget "BetCooker" */;
+			buildConfigurationList = ACF562812DDF27170037D2A6 /* Build configuration list for PBXNativeTarget "BetCooker" */;
 			buildPhases = (
-				ACF562282DDF23B50037D2A6 /* Sources */,
-				ACF562292DDF23B50037D2A6 /* Frameworks */,
-				ACF5622A2DDF23B50037D2A6 /* Resources */,
+				ACF5625C2DDF27150037D2A6 /* Sources */,
+				ACF5625D2DDF27150037D2A6 /* Frameworks */,
+				ACF5625E2DDF27150037D2A6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				ACF5622E2DDF23B50037D2A6 /* BetCooker */,
+				ACF562622DDF27150037D2A6 /* BetCooker */,
 			);
 			name = BetCooker;
 			packageProductDependencies = (
 			);
 			productName = BetCooker;
-			productReference = ACF5622C2DDF23B50037D2A6 /* BetCooker.app */;
+			productReference = ACF562602DDF27150037D2A6 /* BetCooker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ACF562392DDF23B80037D2A6 /* BetCookerTests */ = {
+		ACF5626C2DDF27170037D2A6 /* BetCookerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ACF562512DDF23B80037D2A6 /* Build configuration list for PBXNativeTarget "BetCookerTests" */;
+			buildConfigurationList = ACF562842DDF27170037D2A6 /* Build configuration list for PBXNativeTarget "BetCookerTests" */;
 			buildPhases = (
-				ACF562362DDF23B80037D2A6 /* Sources */,
-				ACF562372DDF23B80037D2A6 /* Frameworks */,
-				ACF562382DDF23B80037D2A6 /* Resources */,
+				ACF562692DDF27170037D2A6 /* Sources */,
+				ACF5626A2DDF27170037D2A6 /* Frameworks */,
+				ACF5626B2DDF27170037D2A6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				ACF5623C2DDF23B80037D2A6 /* PBXTargetDependency */,
+				ACF5626F2DDF27170037D2A6 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				ACF5623D2DDF23B80037D2A6 /* BetCookerTests */,
+				ACF562702DDF27170037D2A6 /* BetCookerTests */,
 			);
 			name = BetCookerTests;
 			packageProductDependencies = (
 			);
 			productName = BetCookerTests;
-			productReference = ACF5623A2DDF23B80037D2A6 /* BetCookerTests.xctest */;
+			productReference = ACF5626D2DDF27170037D2A6 /* BetCookerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		ACF562432DDF23B80037D2A6 /* BetCookerUITests */ = {
+		ACF562762DDF27170037D2A6 /* BetCookerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ACF562542DDF23B80037D2A6 /* Build configuration list for PBXNativeTarget "BetCookerUITests" */;
+			buildConfigurationList = ACF562872DDF27170037D2A6 /* Build configuration list for PBXNativeTarget "BetCookerUITests" */;
 			buildPhases = (
-				ACF562402DDF23B80037D2A6 /* Sources */,
-				ACF562412DDF23B80037D2A6 /* Frameworks */,
-				ACF562422DDF23B80037D2A6 /* Resources */,
+				ACF562732DDF27170037D2A6 /* Sources */,
+				ACF562742DDF27170037D2A6 /* Frameworks */,
+				ACF562752DDF27170037D2A6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				ACF562462DDF23B80037D2A6 /* PBXTargetDependency */,
+				ACF562792DDF27170037D2A6 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				ACF562472DDF23B80037D2A6 /* BetCookerUITests */,
+				ACF5627A2DDF27170037D2A6 /* BetCookerUITests */,
 			);
 			name = BetCookerUITests;
 			packageProductDependencies = (
 			);
 			productName = BetCookerUITests;
-			productReference = ACF562442DDF23B80037D2A6 /* BetCookerUITests.xctest */;
+			productReference = ACF562772DDF27170037D2A6 /* BetCookerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		ACF562242DDF23B50037D2A6 /* Project object */ = {
+		ACF562582DDF27150037D2A6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
-					ACF5622B2DDF23B50037D2A6 = {
+					ACF5625F2DDF27150037D2A6 = {
 						CreatedOnToolsVersion = 16.3;
 					};
-					ACF562392DDF23B80037D2A6 = {
+					ACF5626C2DDF27170037D2A6 = {
 						CreatedOnToolsVersion = 16.3;
-						TestTargetID = ACF5622B2DDF23B50037D2A6;
+						TestTargetID = ACF5625F2DDF27150037D2A6;
 					};
-					ACF562432DDF23B80037D2A6 = {
+					ACF562762DDF27170037D2A6 = {
 						CreatedOnToolsVersion = 16.3;
-						TestTargetID = ACF5622B2DDF23B50037D2A6;
+						TestTargetID = ACF5625F2DDF27150037D2A6;
 					};
 				};
 			};
-			buildConfigurationList = ACF562272DDF23B50037D2A6 /* Build configuration list for PBXProject "BetCooker" */;
+			buildConfigurationList = ACF5625B2DDF27150037D2A6 /* Build configuration list for PBXProject "BetCooker" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = ACF562232DDF23B50037D2A6;
+			mainGroup = ACF562572DDF27150037D2A6;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = ACF5622D2DDF23B50037D2A6 /* Products */;
+			productRefGroup = ACF562612DDF27150037D2A6 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = ACF562942DDF27170037D2A6 /* Products */;
-					ProjectRef = ACF562932DDF27170037D2A6 /* BetCooker.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				ACF5622B2DDF23B50037D2A6 /* BetCooker */,
-				ACF562392DDF23B80037D2A6 /* BetCookerTests */,
-				ACF562432DDF23B80037D2A6 /* BetCookerUITests */,
+				ACF5625F2DDF27150037D2A6 /* BetCooker */,
+				ACF5626C2DDF27170037D2A6 /* BetCookerTests */,
+				ACF562762DDF27170037D2A6 /* BetCookerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		ACF5622A2DDF23B50037D2A6 /* Resources */ = {
+		ACF5625E2DDF27150037D2A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ACF562382DDF23B80037D2A6 /* Resources */ = {
+		ACF5626B2DDF27170037D2A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ACF562422DDF23B80037D2A6 /* Resources */ = {
+		ACF562752DDF27170037D2A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,21 +232,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		ACF562282DDF23B50037D2A6 /* Sources */ = {
+		ACF5625C2DDF27150037D2A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ACF562362DDF23B80037D2A6 /* Sources */ = {
+		ACF562692DDF27170037D2A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ACF562402DDF23B80037D2A6 /* Sources */ = {
+		ACF562732DDF27170037D2A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -270,20 +256,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		ACF5623C2DDF23B80037D2A6 /* PBXTargetDependency */ = {
+		ACF5626F2DDF27170037D2A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ACF5622B2DDF23B50037D2A6 /* BetCooker */;
-			targetProxy = ACF5623B2DDF23B80037D2A6 /* PBXContainerItemProxy */;
+			target = ACF5625F2DDF27150037D2A6 /* BetCooker */;
+			targetProxy = ACF5626E2DDF27170037D2A6 /* PBXContainerItemProxy */;
 		};
-		ACF562462DDF23B80037D2A6 /* PBXTargetDependency */ = {
+		ACF562792DDF27170037D2A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ACF5622B2DDF23B50037D2A6 /* BetCooker */;
-			targetProxy = ACF562452DDF23B80037D2A6 /* PBXContainerItemProxy */;
+			target = ACF5625F2DDF27150037D2A6 /* BetCooker */;
+			targetProxy = ACF562782DDF27170037D2A6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		ACF5624C2DDF23B80037D2A6 /* Debug */ = {
+		ACF5627F2DDF27170037D2A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -335,16 +321,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		ACF5624D2DDF23B80037D2A6 /* Release */ = {
+		ACF562802DDF27170037D2A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -390,88 +378,71 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		ACF5624F2DDF23B80037D2A6 /* Debug */ = {
+		ACF562822DDF27170037D2A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = BetCooker/BetCooker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = group.BetCooker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 2.4;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		ACF562502DDF23B80037D2A6 /* Release */ = {
+		ACF562832DDF27170037D2A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = BetCooker/BetCooker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = group.BetCooker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 2.4;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		ACF562522DDF23B80037D2A6 /* Debug */ = {
+		ACF562852DDF27170037D2A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -479,21 +450,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = group.BetCookerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetCooker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BetCooker";
-				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
 			name = Debug;
 		};
-		ACF562532DDF23B80037D2A6 /* Release */ = {
+		ACF562862DDF27170037D2A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -501,102 +468,88 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = group.BetCookerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetCooker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BetCooker";
-				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
 			name = Release;
 		};
-		ACF562552DDF23B80037D2A6 /* Debug */ = {
+		ACF562882DDF27170037D2A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = group.BetCookerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BetCooker;
-				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
 			name = Debug;
 		};
-		ACF562562DDF23B80037D2A6 /* Release */ = {
+		ACF562892DDF27170037D2A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = group.BetCookerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BetCooker;
-				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ACF562272DDF23B50037D2A6 /* Build configuration list for PBXProject "BetCooker" */ = {
+		ACF5625B2DDF27150037D2A6 /* Build configuration list for PBXProject "BetCooker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ACF5624C2DDF23B80037D2A6 /* Debug */,
-				ACF5624D2DDF23B80037D2A6 /* Release */,
+				ACF5627F2DDF27170037D2A6 /* Debug */,
+				ACF562802DDF27170037D2A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ACF5624E2DDF23B80037D2A6 /* Build configuration list for PBXNativeTarget "BetCooker" */ = {
+		ACF562812DDF27170037D2A6 /* Build configuration list for PBXNativeTarget "BetCooker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ACF5624F2DDF23B80037D2A6 /* Debug */,
-				ACF562502DDF23B80037D2A6 /* Release */,
+				ACF562822DDF27170037D2A6 /* Debug */,
+				ACF562832DDF27170037D2A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ACF562512DDF23B80037D2A6 /* Build configuration list for PBXNativeTarget "BetCookerTests" */ = {
+		ACF562842DDF27170037D2A6 /* Build configuration list for PBXNativeTarget "BetCookerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ACF562522DDF23B80037D2A6 /* Debug */,
-				ACF562532DDF23B80037D2A6 /* Release */,
+				ACF562852DDF27170037D2A6 /* Debug */,
+				ACF562862DDF27170037D2A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ACF562542DDF23B80037D2A6 /* Build configuration list for PBXNativeTarget "BetCookerUITests" */ = {
+		ACF562872DDF27170037D2A6 /* Build configuration list for PBXNativeTarget "BetCookerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ACF562552DDF23B80037D2A6 /* Debug */,
-				ACF562562DDF23B80037D2A6 /* Release */,
+				ACF562882DDF27170037D2A6 /* Debug */,
+				ACF562892DDF27170037D2A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = ACF562242DDF23B50037D2A6 /* Project object */;
+	rootObject = ACF562582DDF27150037D2A6 /* Project object */;
 }
