@@ -17,16 +17,17 @@ struct MatchesView: View {
 
     var body: some View {
         NavigationView {
-            VStack(spacing: 0) {
-                TextField("Rechercher une équipe", text: $searchText)
-                    .padding(10)
+            VStack(spacing: 10) {
+                Spacer(minLength: 0)
+                TextField("Search team", text: $searchText)
+                    .padding(15)
                     .background(Color(hex: "#1F1F2E"))
                     .foregroundColor(.white)
                     .cornerRadius(8)
                     .padding(.horizontal)
 
                 ZStack {
-                    Color(hex: "#121212").edgesIgnoringSafeArea(.all)
+                    Color(hex: "#1f1f1f").edgesIgnoringSafeArea(.all)
 
                     if viewModel.isLoading {
                         ProgressView("Chargement…")
