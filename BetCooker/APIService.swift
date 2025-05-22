@@ -86,9 +86,16 @@ struct ScoreEntry: Codable {
 class APIService {
     static let shared = APIService()
     
-    private let apiKey = "a140c17bce16adaaf8f47deef38c12a3"
-    
-    func fetchOdds(completion: @escaping (Result<[MatchOdds], Error>) -> Void) {
+    private var apiKey: String {
+        guard let path = Bundle.main.path(forResource: "Secrets", ofType: "plist"),
+              let dict = NSDictionary(contentsOfFile: path),
+              let key = dict["ODDS_API_KEY"] as? String else {
+            fatalError("❌ Impossible de charger la clé API")
+        }
+        return key
+    }
+
+    func fetchTennisOdds(completion: @escaping (Result<[MatchOdds], Error>) -> Void) {
         let urlString = """
         https://api.the-odds-api.com/v4/sports/soccer/odds?regions=eu&markets=h2h,spreads,totals&oddsFormat=decimal&apiKey=\(apiKey)
         """
