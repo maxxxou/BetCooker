@@ -144,7 +144,7 @@ class APIService {
         task.resume()
     }
     
-    func fetchTennisScores(completion: @escaping (Result<[TennisScore], Error>) -> Void) {
+    func fetchScores(completion: @escaping (Result<[TennisScore], Error>) -> Void) {
         let urlString = "https://api.the-odds-api.com/v4/sports/soccer_france_ligue_one/scores/?daysFrom=3&apiKey=\(apiKey)"
         
         guard let url = URL(string: urlString) else {
@@ -167,7 +167,7 @@ class APIService {
                 let scores = try JSONDecoder().decode([TennisScore].self, from: data)
 
                 for match in scores {
-                    print("🎾 \(match.homeTeam) vs \(match.awayTeam) at \(match.commenceTime)")
+                    print("⚽\(match.homeTeam) vs \(match.awayTeam) at \(match.commenceTime)")
                     if match.completed {
                         print("✅ Match completed")
                         match.scores?.forEach { entry in

@@ -11,14 +11,20 @@ struct ContentView: View {
     var body: some View {
         Text("Hello, BetCooker!")
             .onAppear {
-                APIService.shared.fetchTennisOdds { _ in }
+                APIService.shared.fetchOdds { _ in }
             }
             .onAppear {
-                APIService.shared.fetchTennisScores { _ in }
+                APIService.shared.fetchScores { _ in }
             }
+        Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
+            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+        }
         }
 }
 
 #Preview {
     ContentView()
 }
+
+
+
