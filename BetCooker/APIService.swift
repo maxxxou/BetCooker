@@ -81,6 +81,14 @@ struct ScoreEntry: Codable {
     let score: String
 }
 
+struct LogoTeam: Codable {
+    let teamLogo: String;
+    
+    enum CodingKeys: String, CodingKey {
+        case teamLogo = "team_logo"
+    }
+}
+
 
 
 class APIService {
@@ -90,6 +98,15 @@ class APIService {
         guard let path = Bundle.main.path(forResource: "Secrets", ofType: "plist"),
               let dict = NSDictionary(contentsOfFile: path),
               let key = dict["ODDS_API_KEY"] as? String else {
+            fatalError("❌ Impossible de charger la clé API")
+        }
+        return key
+    }
+    
+    private var apiKey2: String {
+        guard let path = Bundle.main.path(forResource: "Secrets", ofType: "plist"),
+              let dict = NSDictionary(contentsOfFile: path),
+              let key = dict["LOGO_API_KEY"] as? String else {
             fatalError("❌ Impossible de charger la clé API")
         }
         return key
@@ -165,20 +182,6 @@ class APIService {
 
             do {
                 let scores = try JSONDecoder().decode([TennisScore].self, from: data)
-
-                for match in scores {
-                    print("⚽\(match.homeTeam) vs \(match.awayTeam) at \(match.commenceTime)")
-                    if match.completed {
-                        print("✅ Match completed")
-                        match.scores?.forEach { entry in
-                            print("→ \(entry.name): \(entry.score)")
-                        }
-                    } else {
-                        print("🕒 Scheduled")
-                    }
-                    print("-----")
-                }
-
                 completion(.success(scores))
             } catch {
                 print("❌ Decoding error:", error)
@@ -188,5 +191,35 @@ class APIService {
 
         task.resume()
     }
+    
+    func fetchLogoFromTeamName(_ teamName: String, completion: @escaping (Result<String, Error>) -> Void) {
+        let urlString = "https://apiv2.allsportsapi.com/football/?&met=Teams&teamName=\(teamName)&APIkey=\(apiKey2)"
+        
+        guard let url = URL(string: urlString) else {
+            completion(.failure(NSError(domain: "Bad URL", code: 0)))
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(NSError(domain: "No data", code: 0)))
+                return
+            }
+            do {
+                let teams = try JSONDecoder().decode(LogoTeam.self, from: data)
+                completion(.success(teams.teamLogo))
+            } catch {
+                print("❌ Decoding error:", error)
+                completion(.failure(error))
+            }
+        }
+        
 
+
+    }
 }
