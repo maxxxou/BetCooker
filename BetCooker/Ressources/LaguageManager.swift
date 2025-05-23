@@ -1,25 +1,17 @@
-//
-//  LaguageManager.swift
-//  BetCooker
-//
-//  Created by Anatole Babin on 23/05/2025.
-//
-
-import SwiftUI
+import Foundation
+import Combine
 
 class LanguageManager: ObservableObject {
     @Published var selectedLanguage: String {
         didSet {
-            UserDefaults.standard.set([selectedLanguage], forKey: "AppleLanguages")
-            UserDefaults.standard.synchronize()
-            
-            // Cette ligne va forcer un redémarrage visuel de l'app
-            exit(0)
+            UserDefaults.standard.set(selectedLanguage, forKey: "selectedLanguage")
+            Bundle.setLanguage(selectedLanguage)
+            objectWillChange.send()
         }
     }
 
     init() {
-        let preferred = UserDefaults.standard.stringArray(forKey: "AppleLanguages")?.first ?? "en"
-        self.selectedLanguage = preferred
+        self.selectedLanguage = UserDefaults.standard.string(forKey: "selectedLanguage") ?? Locale.current.languageCode ?? "en"
+        Bundle.setLanguage(self.selectedLanguage)
     }
 }

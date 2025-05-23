@@ -1,32 +1,32 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @AppStorage("selectedLanguage") private var selectedLanguage = "en"
+    @EnvironmentObject var languageManager: LanguageManager
     @AppStorage("colorScheme") private var colorScheme: String = "dark"
-    @StateObject private var languageManager = LanguageManager()
 
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text(NSLocalizedString("Language", comment: "Section header for language selection"))) {
-                    Picker(NSLocalizedString("App Language", comment: "Picker label for language selection"), selection: $languageManager.selectedLanguage) {
+                Section(header: Text(NSLocalizedString("Language", comment: ""))) {
+                    Picker(NSLocalizedString("App Language", comment: ""), selection: $languageManager.selectedLanguage) {
                         Text("🇬🇧 English").tag("en")
                         Text("🇫🇷 Français").tag("fr")
-                        Text("🇪🇸 Espanol").tag("es")
+                        Text("🇪🇸 Español").tag("es")
+                        Text("🇩🇪 Deutsch").tag("de")
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
 
-                Section(header: Text(NSLocalizedString("Theme", comment: "Section header for theme selection"))) {
-                    Picker(NSLocalizedString("App Theme", comment: "Picker label for app theme"), selection: $colorScheme) {
-                        Text(NSLocalizedString("Dark", comment: "Dark theme option")).tag("dark")
-                        Text(NSLocalizedString("Light", comment: "Light theme option")).tag("light")
-                        Text(NSLocalizedString("System", comment: "System theme option")).tag("system")
+                Section(header: Text(NSLocalizedString("Theme", comment: ""))) {
+                    Picker(NSLocalizedString("App Theme", comment: ""), selection: $colorScheme) {
+                        Text(NSLocalizedString("Dark", comment: "")).tag("dark")
+                        Text(NSLocalizedString("Light", comment: "")).tag("light")
+                        Text(NSLocalizedString("System", comment: "")).tag("system")
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
             }
-            .navigationTitle(NSLocalizedString("Settings", comment: "Settings view title"))
+            .navigationTitle(NSLocalizedString("Settings", comment: ""))
         }
         .preferredColorScheme(
             colorScheme == "light" ? .light :
@@ -35,5 +35,6 @@ struct SettingsView: View {
         )
     }
 }
+
 
 
