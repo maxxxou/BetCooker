@@ -40,8 +40,8 @@ struct MatchesView: View {
                     }
                 }
             }
-            .navigationTitle("Matchs")
-            .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
+            .navigationTitle("BetCooker")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(.visible, for: .navigationBar)
             .onAppear { viewModel.fetchOdds() }
         }
@@ -118,3 +118,5 @@ struct anotherView: View {
         }
     }
 }
+
+    
