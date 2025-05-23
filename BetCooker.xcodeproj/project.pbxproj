@@ -24,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		518E7BD92DE0B290003ABAE0 /* BetCooker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BetCooker.xcodeproj; sourceTree = "<group>"; };
 		518E96EE2DDF2C8A001F2389 /* BetCooker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BetCooker.xcodeproj; sourceTree = "<group>"; };
 		ACA77B212DE0AB2C0091D35A /* BetCooker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BetCooker.xcodeproj; sourceTree = "<group>"; };
 		ACD57C3E2DE0802C00270469 /* BetCooker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BetCooker.xcodeproj; sourceTree = "<group>"; };
@@ -75,6 +76,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		518E7BDB2DE0B290003ABAE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		518E96F12DDF2C8A001F2389 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +235,10 @@
 			productRefGroup = ACF562AF2DDF2B750037D2A6 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 518E7BDB2DE0B290003ABAE0 /* Products */;
+					ProjectRef = 518E7BD92DE0B290003ABAE0 /* BetCooker.xcodeproj */;
+				},
 				{
 					ProductGroup = 518E96F12DDF2C8A001F2389 /* Products */;
 					ProjectRef = 518E96EE2DDF2C8A001F2389 /* BetCooker.xcodeproj */;

@@ -3,15 +3,16 @@ import SwiftUI
 struct SettingsView: View {
     @AppStorage("selectedLanguage") private var selectedLanguage = "en"
     @AppStorage("colorScheme") private var colorScheme: String = "dark"
+    @StateObject private var languageManager = LanguageManager()
 
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text(NSLocalizedString("Language", comment: "Section header for language selection"))) {
-                    Picker(NSLocalizedString("App Language", comment: "Picker label for language selection"), selection: $selectedLanguage) {
-                        Text("English").tag("en")
-                        Text("Français").tag("fr")
-                        // Tu peux ajouter d'autres langues ici si besoin
+                    Picker(NSLocalizedString("App Language", comment: "Picker label for language selection"), selection: $languageManager.selectedLanguage) {
+                        Text("🇬🇧 English").tag("en")
+                        Text("🇫🇷 Français").tag("fr")
+                        Text("🇪🇸 Espanol").tag("es")
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
