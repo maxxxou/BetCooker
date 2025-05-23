@@ -17,7 +17,7 @@ struct MatchesView: View {
 
     var body: some View {
         NavigationView {
-            VStack(spacing: 10) {
+            VStack(spacing: 12) {
                 Spacer(minLength: 0)
                 TextField("Search team", text: $searchText)
                     .padding(15)
@@ -25,9 +25,8 @@ struct MatchesView: View {
                     .foregroundColor(.white)
                     .cornerRadius(8)
                     .padding(.horizontal)
-
                 ZStack {
-                    Color(hex: "#1f1f1f").edgesIgnoringSafeArea(.all)
+                    Color(hex: "#000000").edgesIgnoringSafeArea(.all)
 
                     if viewModel.isLoading {
                         ProgressView("Chargement…")

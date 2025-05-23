@@ -5,7 +5,7 @@ struct BetApp: App {
     var body: some Scene {
         WindowGroup {
             MainTabView()
-                .preferredColorScheme(.dark) // ← force le dark mode ici
+                .preferredColorScheme(.dark)
         }
     }
 }

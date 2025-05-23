@@ -12,7 +12,7 @@ struct MatchDetailView: View {
                     .foregroundColor(.white)
 
                 Text("\(match.commenceTime.prefix(16).replacingOccurrences(of: "T", with: " "))")
-                    .foregroundColor(Color(hex: "#1f1f1f"))
+                    .foregroundColor(Color(hex: "#000000"))
 
                 ForEach(match.bookmakers, id: \.key) { bookmaker in
                     VStack(alignment: .leading, spacing: 8) {
@@ -46,7 +46,7 @@ struct MatchDetailView: View {
             }
             .padding()
         }
-        .background(Color(hex: "#1f1f1f"))
+        .background(Color(hex: "#000000"))
         .navigationTitle("Détails")
         .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
