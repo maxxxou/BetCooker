@@ -4,25 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BetCooker.xcscheme_^#shared#^_</key>
+		<key>BetCookerTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+		<key>BetCookerUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>ACF562AD2DDF2B750037D2A6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ACF562BA2DDF2B780037D2A6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ACF562C42DDF2B780037D2A6</key>
+		<key>ACF5625F2DDF27150037D2A6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
