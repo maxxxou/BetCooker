@@ -37,41 +37,7 @@ struct MatchesView: View {
                             .foregroundColor(.red)
                             .padding()
                     } else {
-                        ScrollView {
-                            LazyVStack(spacing: 12) {
-                                ForEach(filteredMatches, id: \.id) { match in
-                                    NavigationLink(destination: MatchDetailView(match: match)) {
-                                        HStack {
-                                            VStack(alignment: .leading, spacing: 4) {
-                                                Text("\(match.homeTeam)")
-                                                    .foregroundColor(.white)
-                                                    .font(.headline)
-                                                Text("VS")
-                                                    .foregroundColor(Color(hex: "#9B5DE5"))
-                                                    .font(.caption)
-                                                Text("\(match.awayTeam)")
-                                                    .foregroundColor(.white)
-                                                    .font(.headline)
-                                            }
-                                            Spacer()
-                                            VStack {
-                                                Text("\(match.commenceTime.prefix(16).replacingOccurrences(of: "T", with: " "))")
-                                                    .font(.caption2)
-                                                    .foregroundColor(Color(hex: "#B0B0B0"))
-                                                Image(systemName: "chevron.right")
-                                                    .foregroundColor(Color(hex: "#9B5DE5"))
-                                            }
-                                        }
-                                        .padding()
-                                        .background(Color(hex: "#1F1F2E"))
-                                        .cornerRadius(12)
-                                        .shadow(radius: 2)
-                                    }
-                                    .padding(.horizontal)
-                                }
-                            }
-                            .padding(.top)
-                        }
+                        MatchListScrollView(filteredMatches: filteredMatches)
                     }
                 }
             }
@@ -79,6 +45,77 @@ struct MatchesView: View {
             .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .onAppear { viewModel.fetchOdds() }
+        }
+    }
+}
+
+
+struct MatchListScrollView: View {
+    
+    let filteredMatches: [MatchOdds];
+    
+    
+
+    var body: some View {
+        ScrollView {
+            LazyVStack(spacing: 12) {
+                ForEach(filteredMatches, id: \.id) { (match: MatchOdds) in
+                    NavigationLink(destination: MatchDetailView(match: match)) {
+                        HStack {
+                            anotherView(match: match)
+                        }
+                        .padding()
+                        .background(Color(hex: "#1F1F2E"))
+                        .cornerRadius(12)
+                        .shadow(radius: 2)
+                    }
+                    .padding(.horizontal)
+                }
+            }
+            .padding(.top)
+        }
+    }
+    
+}
+
+struct anotherView: View {
+    
+    let match: MatchOdds;
+    
+    let formatter = DateFormatter();
+
+    func setToLocal(textCase: String) -> String? {
+        let inputFormatter = ISO8601DateFormatter()
+        guard let date = inputFormatter.date(from: textCase) else {
+            return nil
+        }
+
+        let outputFormatter = DateFormatter()
+        outputFormatter.locale = Locale(identifier: "fr_FR")
+        outputFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+
+        return outputFormatter.string(from: date)
+    }
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text("\(match.homeTeam)")
+                .foregroundColor(.white)
+                .font(.headline)
+            Text("VS")
+                .foregroundColor(Color(hex: "#9B5DE5"))
+                .font(.caption)
+            Text("\(match.awayTeam)")
+                .foregroundColor(.white)
+                .font(.headline)
+        }
+        Spacer()
+        VStack {
+            Text(setToLocal(textCase: match.commenceTime) ?? "Date inconnue")
+                .font(.caption2)
+                .foregroundColor(Color(hex: "#B0B0B0"))
+            Image(systemName: "chevron.right")
+                .foregroundColor(Color(hex: "#9B5DE5"))
         }
     }
 }
