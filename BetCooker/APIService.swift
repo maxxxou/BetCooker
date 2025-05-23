@@ -82,10 +82,10 @@ struct ScoreEntry: Codable {
 }
 
 struct LogoTeam: Codable {
-    let teamLogo: String;
+    let strBadge: String;
     
     enum CodingKeys: String, CodingKey {
-        case teamLogo = "team_logo"
+        case strBadge = "strBadge"
     }
 }
 
@@ -193,7 +193,7 @@ class APIService {
     }
     
     func fetchLogoFromTeamName(_ teamName: String, completion: @escaping (Result<String, Error>) -> Void) {
-        let urlString = "https://apiv2.allsportsapi.com/football/?&met=Teams&teamName=\(teamName)&APIkey=\(apiKey2)"
+        let urlString = "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=\(teamName)"
         
         guard let url = URL(string: urlString) else {
             completion(.failure(NSError(domain: "Bad URL", code: 0)))
@@ -212,14 +212,11 @@ class APIService {
             }
             do {
                 let teams = try JSONDecoder().decode(LogoTeam.self, from: data)
-                completion(.success(teams.teamLogo))
+                completion(.success(teams.strBadge))
             } catch {
                 print("❌ Decoding error:", error)
                 completion(.failure(error))
             }
         }
-        
-
-
     }
 }
