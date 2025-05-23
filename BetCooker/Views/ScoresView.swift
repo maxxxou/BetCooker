@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ScoresView: View {
-    @State private var scores: [TennisScore] = []
+    @State private var scores: [MatchScores] = []
     @State private var isLoading = true
     @State private var errorMessage: String?
 

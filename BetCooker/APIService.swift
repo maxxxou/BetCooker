@@ -52,7 +52,7 @@ struct Outcome: Codable {
     }
 }
 
-struct TennisScore: Codable {
+struct MatchScores: Codable {
     let id: String
     let sportKey: String
     let sportTitle: String
@@ -161,7 +161,7 @@ class APIService {
         task.resume()
     }
     
-    func fetchScores(completion: @escaping (Result<[TennisScore], Error>) -> Void) {
+    func fetchScores(completion: @escaping (Result<[MatchScores], Error>) -> Void) {
         let urlString = "https://api.the-odds-api.com/v4/sports/soccer_france_ligue_one/scores/?daysFrom=3&apiKey=\(apiKey)"
         
         guard let url = URL(string: urlString) else {
@@ -181,7 +181,7 @@ class APIService {
             }
 
             do {
-                let scores = try JSONDecoder().decode([TennisScore].self, from: data)
+                let scores = try JSONDecoder().decode([MatchScores].self, from: data)
                 completion(.success(scores))
             } catch {
                 print("❌ Decoding error:", error)
