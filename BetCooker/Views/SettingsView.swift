@@ -16,15 +16,6 @@ struct SettingsView: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
-
-                Section(header: Text(NSLocalizedString("Theme", comment: ""))) {
-                    Picker(NSLocalizedString("App Theme", comment: ""), selection: $colorScheme) {
-                        Text(NSLocalizedString("Dark", comment: "")).tag("dark")
-                        Text(NSLocalizedString("Light", comment: "")).tag("light")
-                        Text(NSLocalizedString("System", comment: "")).tag("system")
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-                }
             }
             .navigationTitle(NSLocalizedString("Settings", comment: ""))
         }

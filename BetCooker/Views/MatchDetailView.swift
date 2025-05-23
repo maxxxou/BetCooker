@@ -24,6 +24,7 @@ let bookmakerLinks: [String: String] = [
 
 struct MatchDetailView: View {
     let match: MatchOdds
+    
     @State private var homeTeamLogoURL: String?
     @State private var awayTeamLogoURL: String?
 
@@ -42,6 +43,11 @@ struct MatchDetailView: View {
                             }
                             .frame(width: 26, height: 26)
                             .clipShape(Circle())
+                        }
+                        else{
+                                    Image("domicile")
+                                    .resizable()
+                                    .frame(width: 26, height: 26)
                         }
 
                         Text(match.homeTeam)
@@ -64,6 +70,11 @@ struct MatchDetailView: View {
                             }
                             .frame(width: 26, height: 26)
                             .clipShape(Circle())
+                        }
+                        else{
+                                    Image("exterieur")
+                                    .resizable()
+                                    .frame(width: 26, height: 26)
                         }
                     }
                     .frame(maxWidth: .infinity)
@@ -136,7 +147,32 @@ struct MatchDetailView: View {
         .background(Color(hex: "#000000"))
         .navigationTitle(NSLocalizedString("Details", comment: "Navigation title for match details"))
         .toolbarBackground(.visible, for: .navigationBar)
+        .onAppear {
+            APIService.shared.fetchLogoFromTeamName(match.homeTeam) { result in
+                        if case let .success(url) = result, url != "caca" {
+                            DispatchQueue.main.async {
+                                homeTeamLogoURL = url
+                            }
+                        }
+                else {
+                        awayTeamLogoURL = nil
+                    }
+            }
+            
+            APIService.shared.fetchLogoFromTeamName(match.awayTeam) { result in
+                        if case let .success(url) = result, url != "caca" {
+                            DispatchQueue.main.async {
+                                awayTeamLogoURL = url
+                            }
+                        }
+                else {
+                        awayTeamLogoURL = nil
+                    }
+            }
+
+        }
     }
+    
 }
 
 struct OutcomeButton: View {
