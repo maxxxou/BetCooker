@@ -81,13 +81,14 @@ struct ScoreEntry: Codable {
     let score: String
 }
 
-struct LogoTeam: Codable {
-    let strBadge: String;
-    
-    enum CodingKeys: String, CodingKey {
-        case strBadge = "strBadge"
-    }
+struct LogoTeamResponse: Codable {
+    let teams: [LogoTeam]?
 }
+
+struct LogoTeam: Codable {
+    let strBadge: String
+}
+
 
 
 
@@ -192,9 +193,8 @@ class APIService {
         task.resume()
     }
     
-    func fetchLogoFromTeamName(_ teamName: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func fetchLogoFromTeamName(_ teamName: String, completion: @escaping(Result<String, Error>) -> Void) {
         let urlString = "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=\(teamName)"
-        
         guard let url = URL(string: urlString) else {
             completion(.failure(NSError(domain: "Bad URL", code: 0)))
             return
@@ -211,12 +211,20 @@ class APIService {
                 return
             }
             do {
-                let teams = try JSONDecoder().decode(LogoTeam.self, from: data)
-                completion(.success(teams.strBadge))
+                let response = try JSONDecoder().decode(LogoTeamResponse.self, from: data)
+                
+                if let teams = response.teams {
+                    completion(.success(teams[0].strBadge))
+                }
+                else {
+                    completion(.success("caca"))
+                }
             } catch {
                 print("❌ Decoding error:", error)
                 completion(.failure(error))
             }
         }
+        
+        task.resume()
     }
 }
