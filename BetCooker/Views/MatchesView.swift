@@ -78,45 +78,49 @@ struct MatchListScrollView: View {
 }
 
 struct anotherView: View {
-    
-    let match: MatchOdds;
-    
-    let formatter = DateFormatter();
+    let match: MatchOdds
 
-    func setToLocal(textCase: String) -> String? {
+    func formattedDate(from isoString: String) -> String {
         let inputFormatter = ISO8601DateFormatter()
-        guard let date = inputFormatter.date(from: textCase) else {
-            return nil
+        guard let date = inputFormatter.date(from: isoString) else {
+            return "Date inconnue"
         }
 
-        let outputFormatter = DateFormatter()
-        outputFormatter.locale = Locale(identifier: "fr_FR")
-        outputFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        let calendar = Calendar.current
+        let isToday = calendar.isDateInToday(date)
 
-        return outputFormatter.string(from: date)
+        let timeFormatter = DateFormatter()
+        timeFormatter.locale = Locale(identifier: "fr_FR")
+        timeFormatter.dateFormat = "HH:mm"
+
+        let fullFormatter = DateFormatter()
+        fullFormatter.locale = Locale(identifier: "fr_FR")
+        fullFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+
+        return isToday ? "Today - \(timeFormatter.string(from: date))" : fullFormatter.string(from: date)
     }
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text("\(match.homeTeam)")
+            Text(match.homeTeam)
                 .foregroundColor(.white)
                 .font(.headline)
             Text("VS")
                 .foregroundColor(Color(hex: "#9B5DE5"))
                 .font(.caption)
-            Text("\(match.awayTeam)")
+            Text(match.awayTeam)
                 .foregroundColor(.white)
                 .font(.headline)
         }
         Spacer()
-        VStack {
-            Text(setToLocal(textCase: match.commenceTime) ?? "Date inconnue")
-                .font(.caption2)
+        VStack(alignment: .trailing, spacing: 2) {
+            Text(formattedDate(from: match.commenceTime))
+                .font(.subheadline.bold()) // texte en gras
                 .foregroundColor(Color(hex: "#B0B0B0"))
+                .padding(.bottom, 25) // remonte par rapport à la flèche
             Image(systemName: "chevron.right")
                 .foregroundColor(Color(hex: "#9B5DE5"))
         }
     }
 }
 
-    
