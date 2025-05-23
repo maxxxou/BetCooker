@@ -14,6 +14,12 @@ struct MainTabView: View {
                     Image(systemName: "bolt.fill")
                     Text("Live")
                 }
+
+            ScoresView()
+                .tabItem {
+                    Image(systemName: "clock.arrow.circlepath")
+                    Text("Scores")
+                }
         }
         .accentColor(Color(hex: "#9B5DE5"))
         .background(.ultraThinMaterial)
