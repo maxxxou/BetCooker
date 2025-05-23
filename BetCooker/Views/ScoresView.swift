@@ -1,11 +1,3 @@
-
-//
-//  ScoresView.swift
-//  BetCooker
-//
-//  Created by Guest User on 23/05/2025.
-//
-
 import SwiftUI
 
 struct ScoresView: View {
@@ -19,10 +11,10 @@ struct ScoresView: View {
                 Color(hex: "#000000").edgesIgnoringSafeArea(.all)
 
                 if isLoading {
-                    ProgressView("Loading scores…")
+                    ProgressView(NSLocalizedString("Loading scores…", comment: "Indicateur de chargement des scores"))
                         .foregroundColor(.white)
                 } else if let errorMessage = errorMessage {
-                    Text("Error: \(errorMessage)")
+                    Text(String(format: NSLocalizedString("ERROR : %@", comment: "Message d'erreur avec détail"), errorMessage))
                         .foregroundColor(.red)
                         .padding()
                 } else {
@@ -53,7 +45,7 @@ struct ScoresView: View {
                     }
                 }
             }
-            .navigationTitle("Scores")
+            .navigationTitle(NSLocalizedString("Scores", comment: "Titre de la vue scores"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbar {
@@ -79,3 +71,5 @@ struct ScoresView: View {
         }
     }
 }
+
+

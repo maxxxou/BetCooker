@@ -9,10 +9,10 @@ struct LiveMatchesView: View {
                 Color(hex: "#000000").edgesIgnoringSafeArea(.all)
 
                 if viewModel.isLoading {
-                    ProgressView("Loading…")
+                    ProgressView(NSLocalizedString("Loading…", comment: "Indicateur de chargement"))
                         .foregroundColor(.white)
                 } else if let error = viewModel.errorMessage {
-                    Text("Error: \(error)")
+                    Text(String(format: NSLocalizedString("Error: %@", comment: "Message d'erreur avec détail"), error))
                         .foregroundColor(.red)
                         .padding()
                 } else {
@@ -44,7 +44,7 @@ struct LiveMatchesView: View {
                             }
 
                             if liveMatches.isEmpty && upcomingMatches.isEmpty {
-                                Text("No live matches at the moment.")
+                                Text(NSLocalizedString("No live matches at the moment.", comment: "Message quand aucun match en direct"))
                                     .foregroundColor(.white)
                                     .padding()
                             }
@@ -55,7 +55,7 @@ struct LiveMatchesView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    Text("BetCooker")
+                    Text(NSLocalizedString("BetCooker", comment: "Titre principal de l'application"))
                         .font(.headline)
                         .foregroundColor(.white)
                 }
@@ -80,9 +80,13 @@ struct LiveMatchCard: View {
         let minutes = (interval % 3600) / 60
 
         if hours > 0 {
-            return "\(hours)h \(minutes)m"
+            return String(format: NSLocalizedString("%dh %dm", comment: "Countdown heures et minutes"))
+                .replacingOccurrences(of: "%d", with: "\(hours)", options: [], range: nil)
+                .replacingOccurrences(of: "%d", with: "\(minutes)", options: [], range: nil)
+            // Alternativement, gérer proprement via String(format:)
         } else {
-            return "\(minutes)m"
+            return String(format: NSLocalizedString("%dm", comment: "Countdown minutes"))
+                .replacingOccurrences(of: "%d", with: "\(minutes)", options: [], range: nil)
         }
     }
 
@@ -96,7 +100,7 @@ struct LiveMatchCard: View {
                 if isUpcoming {
                     HStack(spacing: 4) {
                         Image(systemName: "hourglass")
-                        Text("Starting soon")
+                        Text(NSLocalizedString("Starting soon", comment: "Match qui commence bientôt"))
                         if let countdown = countdownString() {
                             Text("· \(countdown)")
                         }
@@ -117,3 +121,5 @@ struct LiveMatchCard: View {
         .shadow(radius: 1)
     }
 }
+
+

@@ -25,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		518E96EE2DDF2C8A001F2389 /* BetCooker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BetCooker.xcodeproj; sourceTree = "<group>"; };
+		ACA77B212DE0AB2C0091D35A /* BetCooker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BetCooker.xcodeproj; sourceTree = "<group>"; };
 		ACD57C3E2DE0802C00270469 /* BetCooker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BetCooker.xcodeproj; sourceTree = "<group>"; };
 		ACF562AE2DDF2B750037D2A6 /* BetCooker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetCooker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF562BB2DDF2B780037D2A6 /* BetCookerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetCookerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +76,13 @@
 
 /* Begin PBXGroup section */
 		518E96F12DDF2C8A001F2389 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACA77B232DE0AB2C0091D35A /* Products */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -208,6 +216,10 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				es,
+				it,
+				fr,
 			);
 			mainGroup = ACF562A52DDF2B750037D2A6;
 			minimizedProjectReferenceProxies = 1;
@@ -218,6 +230,10 @@
 				{
 					ProductGroup = 518E96F12DDF2C8A001F2389 /* Products */;
 					ProjectRef = 518E96EE2DDF2C8A001F2389 /* BetCooker.xcodeproj */;
+				},
+				{
+					ProductGroup = ACA77B232DE0AB2C0091D35A /* Products */;
+					ProjectRef = ACA77B212DE0AB2C0091D35A /* BetCooker.xcodeproj */;
 				},
 				{
 					ProductGroup = ACD57C3F2DE0802C00270469 /* Products */;

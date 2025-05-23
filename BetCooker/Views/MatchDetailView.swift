@@ -22,7 +22,7 @@ struct MatchDetailView: View {
 
                         ForEach(bookmaker.markets, id: \.key) { market in
                             VStack(alignment: .leading) {
-                                Text("Marché : \(market.key)")
+                                Text(String(format: NSLocalizedString("Market: %@", comment: "Label for market key in match details"), market.key))
                                     .foregroundColor(Color(hex: "#b0b0b0"))
                                     .font(.subheadline)
 
@@ -47,8 +47,10 @@ struct MatchDetailView: View {
             .padding()
         }
         .background(Color(hex: "#000000"))
-        .navigationTitle("Détails")
+        .navigationTitle(NSLocalizedString("Details", comment: "Navigation title for match details"))
         .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
     }
 }
+
+

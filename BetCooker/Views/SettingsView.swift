@@ -1,10 +1,3 @@
-//
-//  SettingView.swift
-//  BetCooker
-//
-//  Created by Guest User on 23/05/2025.
-//
-
 import SwiftUI
 
 struct SettingsView: View {
@@ -14,24 +7,25 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Language")) {
-                    Picker("App Language", selection: $selectedLanguage) {
+                Section(header: Text(NSLocalizedString("Language", comment: "Section header for language selection"))) {
+                    Picker(NSLocalizedString("App Language", comment: "Picker label for language selection"), selection: $selectedLanguage) {
                         Text("English").tag("en")
                         Text("Français").tag("fr")
+                        // Tu peux ajouter d'autres langues ici si besoin
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
 
-                Section(header: Text("Theme")) {
-                    Picker("App Theme", selection: $colorScheme) {
-                        Text("Dark").tag("dark")
-                        Text("Light").tag("light")
-                        Text("System").tag("system")
+                Section(header: Text(NSLocalizedString("Theme", comment: "Section header for theme selection"))) {
+                    Picker(NSLocalizedString("App Theme", comment: "Picker label for app theme"), selection: $colorScheme) {
+                        Text(NSLocalizedString("Dark", comment: "Dark theme option")).tag("dark")
+                        Text(NSLocalizedString("Light", comment: "Light theme option")).tag("light")
+                        Text(NSLocalizedString("System", comment: "System theme option")).tag("system")
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
             }
-            .navigationTitle("Settings")
+            .navigationTitle(NSLocalizedString("Settings", comment: "Settings view title"))
         }
         .preferredColorScheme(
             colorScheme == "light" ? .light :
@@ -40,3 +34,5 @@ struct SettingsView: View {
         )
     }
 }
+
+

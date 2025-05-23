@@ -8,25 +8,25 @@ struct MainTabView: View {
             MatchesView()
                 .tabItem {
                     Image(systemName: "list.bullet")
-                    Text("Matchs")
+                    Text(NSLocalizedString("Matches", comment: "Onglet pour les matchs"))
                 }
 
             LiveMatchesView()
                 .tabItem {
                     Image(systemName: "bolt.fill")
-                    Text("Live")
+                    Text(NSLocalizedString("Live", comment: "Onglet pour les matchs en direct"))
                 }
 
             ScoresView()
                 .tabItem {
                     Image(systemName: "clock.arrow.circlepath")
-                    Text("Scores")
+                    Text(NSLocalizedString("Scores", comment: "Onglet pour les scores"))
                 }
 
             SettingsView()
                 .tabItem {
                     Image(systemName: "gearshape")
-                    Text("Settings")
+                    Text(NSLocalizedString("Settings", comment: "Onglet des paramètres"))
                 }
         }
         .accentColor(Color(hex: "#9B5DE5"))
@@ -37,3 +37,5 @@ struct MainTabView: View {
         )
     }
 }
+
+
